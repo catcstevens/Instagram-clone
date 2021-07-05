@@ -1,11 +1,16 @@
-
+import React from 'react'
+import { firebase, FieldValue } from './lib/firebase'
+import FirebaseContext from './context/firebase'
 import './App.css';
 
 function App() {
   return (
-    <div className="pt-6 bg-gray-300">
-      <h1>Hello suckers!</h1>
-    </div>
+    
+    <FirebaseContext.Provider value={{ firebase, FieldValue }}>
+       <h1 className='text-red-500'>“Like everything else, Fletcher. Practice.”</h1>
+    </FirebaseContext.Provider>
+     
+    
   );
 }
 
